@@ -2,16 +2,15 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Kit;
 use Illuminate\Database\Seeder;
 
 class KitSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
-        //
+        Kit::create(['nombre' => 'Kit Starter Robotics', 'user_id' => 1]);
+        Kit::create(['nombre' => 'Educational Robotics Kit', 'user_id' => 2]);
+        Kit::create(['nombre' => 'Advanced Kit Pro', 'user_id' => 3]);
     }
 }

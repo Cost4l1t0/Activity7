@@ -2,15 +2,33 @@
 
 namespace Database\Seeders;
 
-use App\Models\Kit;
 use Illuminate\Database\Seeder;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
-class KitSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     public function run(): void
     {
-        Kit::create(['nombre' => 'Kit Starter Robotics', 'user_id' => 1]);
-        Kit::create(['nombre' => 'Educational Robotics Kit', 'user_id' => 2]);
-        Kit::create(['nombre' => 'Advanced Kit Pro', 'user_id' => 3]);
+        User::create([
+            'name' => 'Admon',
+            'email' => 'admon@robotics.com',
+            'password' => Hash::make('Adm@2022'),
+            'role_id' => 1 
+        ]);
+
+        User::create([
+            'name' => 'Tecmilenio',
+            'email' => 'tecmilenio@robotics.com',
+            'password' => Hash::make('Adm@2022'),
+            'role_id' => 2 
+        ]);
+
+        User::create([
+            'name' => 'Student',
+            'email' => 'student@robotics.com',
+            'password' => Hash::make('Adm@2022'),
+            'role_id' => 3 
+        ]);
     }
 }
